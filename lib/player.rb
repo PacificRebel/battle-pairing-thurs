@@ -3,7 +3,7 @@ class Player
 
   def initialize(name)
     @name = name
-    @hp = 20
+    @hp = 100
   end
 
   def lose_health

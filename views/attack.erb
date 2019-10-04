@@ -1,17 +1,25 @@
 <center>
 <h1>
   <% if @game.lost %>
+  <br>
   You lose.
   <% elsif %>
   <%= @game.player1.name %> attacked <%= @game.player2.name %>
   <% end %>
+<br>
 <br>
 <%= @game.player1.name %> has <%= @game.player1.hp%>HP
 <br>
 <%= @game.player2.name %> has <%= @game.player2.hp%>HP
 </h1>
 
+<% if @game.lost %>
+ <form action="/">
+  <input type="submit" value="New game">
+  </form>
+<% else %>
+
 <form action="/play">
   <input type="submit" value="Go back">
 </form>
-</center>
+<% end %>
