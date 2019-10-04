@@ -13,18 +13,18 @@ class Battle < Sinatra::Base
     p params
     player1 = Player.new(params[:Player1])
     player2 = Player.new(params[:Player2])
-    $game = Game.new(player1, player2)
+    Game.create(player1, player2)
     redirect '/play'
   end
 
   get '/play' do
-    @game = $game
+    @game = Game.instance
     erb :play
   end
 
   get '/attack' do
-    @game = $game
-    $game.attack
+    @game = Game.instance
+    @game.attack
     erb :attack
   end
 
