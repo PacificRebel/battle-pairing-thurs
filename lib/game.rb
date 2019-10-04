@@ -16,7 +16,7 @@ class Game
     if @current_turn == @player1
       p1_attack_p2
       @current_turn = @player2
-      @defender = @player1
+      # @defender = @player1
     else
       p2_attack_p1
       @current_turn = @player1

@@ -7,7 +7,7 @@ feature 'lost' do
       click_button "Go back"
     end
     click_button "Attack"
-    expect(page).to have_content("You lose.")
+    expect(page).to have_content("Heli, you lose.")
     expect(page).to have_button("New game")
   end
 end

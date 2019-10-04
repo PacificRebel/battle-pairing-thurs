@@ -2,7 +2,8 @@
 <h1>
   <% if @game.lost %>
   <br>
-  You lose.
+  <%= @game.current_turn.name %>, you lose.
+
   <% elsif %>
   <%= @game.player1.name %> attacked <%= @game.player2.name %>
   <% end %>
